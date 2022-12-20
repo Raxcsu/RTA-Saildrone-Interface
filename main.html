@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTA Saildrone - UTEC</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="titulo"> 
+            <h1>Real Time Autonomous Saildrone</h1>
+        </div>
+    </header>
+
+    <!--div class="sensores">
+        <h4>Sensor</h4>
+        <li>Opción 1: <span class="numero">0000</span></li>
+        <li>Opción 2: <span class="numero">0000</span></li>
+        <li>Opción 3: <span class="numero">0000</span></li>
+    </div-->
+
+    <main>
+        <div class="Left">
+
+            <div class="battery-container">
+                <div class="battery-progress">
+                    <span class="battery-value" id="battery">100%</span>
+                </div>
+
+                <span class="text">Battery</span>
+            </div>
+
+            <div class="current">
+                <div class="current-container">
+                    <div class="current-progress" id="current1">
+                        <span class="current-value" id="motor1">2</span>
+                    </div>
+
+                    <span class="text">Motor 1</span>
+                </div>
+
+                <div class="current-container">
+                    <div class="current-progress" id="current2">
+                        <span class="current-value" id="motor2">2</span>
+                    </div>
+
+                    <span class="text">Motor 2</span>
+                </div>
+            </div>
+
+            <h4>_______________________________________</h4>
+            <h3><br>Saildrone Position</h3>
+
+            <div class="viñetas">
+                <br>
+                <table>
+                    <tr>
+                        <th>Latitud:</th>
+                        <td>24°04'S</td>
+                    </tr>
+                    <tr>
+                        <th>Longitud:</th>
+                        <td>77°10'W</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+    
+        <div class="Middle">
+            <h3>RTA Geolocalization</h3>
+            <div class="mapa">
+                <img 
+                    src="./img/map.png"
+                    height="720"
+                    style="object-fit: contain;"
+                >
+            </div>
+        </div>
+    
+        <div class="Rigth">
+            <h3>Environmental Data</h3>
+
+            <div class="viñetas">
+                <br>
+                <table>
+                    <tr>
+                        <th>Temp</th>
+                        <td>25 °C</td>
+                    </tr>
+                    <tr>
+                        <th>Wind Vel</th>
+                        <td>14 km/h</td>
+                    </tr>
+                    <tr>
+                        <th>Wind Dir</th>
+                        <td>270°</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <!--footer>
+        <div class="f-button">
+            <a href="screen_general.html" class="button">General</a>
+            <a href="screen_camara.html" class="button">Cámara</a>
+            <a href="screen_sensores.html" class="button">Sensores</a>
+            <a href="screen_orientacion.html" class="button">Orientación</a>
+            <a href="screen_brobotico.html" class="button">Brazo robótico</a>
+        </div>
+    </footer-->
+
+    <!-- JavaScript -->
+    <script src="./js/battery-script.js"></script>
+    <script src="./js/data-script.js"></script>
+
+</body>
+</html>

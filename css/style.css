@@ -1,0 +1,227 @@
+/*
+> Latitud:  float
+> Longitud: float
+> Bateria:  int
+> Corriente 1:  float
+> Corriente 2:  float
+> Temperatura:  float
+*/
+
+  
+/* =========================================== */
+/* GLOBAL VARIABLES*/
+/* =========================================== */
+:root {
+    --color_white: #FFFFFF;
+    --color_lightGray1: #F1F5FB;
+    --color_lightGray2: #DBDDE3;
+    --color_Gray: #A7A9AD;
+    --color_DarkGray1: #222222;
+    --color_DarkGray2: #121212;
+    --color_almostBlack: #14121E;
+    --color_black: #000000;
+}
+
+/* =========================================== */
+/* GENERAL*/
+/* =========================================== */
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+
+body {
+    font-family: monospace, sans-serif;
+    font-size: 18px;
+}
+
+/* =========================================== */
+/* HEADER */
+/* =========================================== */
+header{
+    background-color: var(--color_lightGray1);
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.6);
+
+    display: flex;
+    text-align: center;
+}
+
+.titulo{
+    margin: 5px auto;
+    line-height: 250%;
+    text-align: center;
+}
+
+.titulo > h1{
+    font-family: verdana, monospace, sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+/* =========================================== */
+/* MAIN */
+/* =========================================== */
+main {
+    margin-top: 25px;
+    height: 80vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+/* =========================================== */
+/* LEFT */
+/* =========================================== */
+.Left {
+    width: 25%;
+    padding: 5px;
+    margin: 0 7.5px 0 15px;
+    border: solid 1px var(--color_lightGray2);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+/* =========================================== */
+/* MIDDLE */
+/* =========================================== */
+.Middle{
+    width: 50%;
+    padding: 5px;
+    margin: 0 7.5px 0 7.5px;
+    text-align: center;
+    border: solid 1px var(--color_lightGray2);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+/* =========================================== */
+/* RIGHT */
+/* =========================================== */
+.Rigth{
+    width: 25%;
+    padding: 40px 0;
+    margin: 0 15px 0 7.5px;
+    text-align: center;
+    justify-content: center;
+    border: solid 1px var(--color_lightGray2);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    text-align: right;
+    padding-right: 20px;
+}
+
+td {
+    text-align: left;
+    padding-left: 20px;
+}
+      
+
+/* =========================================== */
+/* CIRCLE PROGRESS BAR */
+/* =========================================== */
+/* https://www.codinglabweb.com/2022/06/progress-bar-html-css-javascript.html*/
+
+.battery-container{
+    display: flex;
+    width: 100%;
+    padding: 40px 0;
+    border-radius: 8px;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.battery-progress{
+    position: relative;
+    height: 280px;
+    width: 280px;
+    border-radius: 50%;
+    background: conic-gradient(var(--color_Gray) 3.6deg, var(--color_lightGray2) 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.battery-progress::before{
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.battery-value{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color_DarkGray2);
+}
+
+.battery-container > .text{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* =========================================== */
+/* =========================================== */
+
+.current{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.current-container{
+    display: flex;
+    width: 50%;
+    border-radius: 8px;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.current-progress{
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background: conic-gradient(var(--color_Gray) 36deg, var(--color_lightGray2) 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-progress::before{
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.current-value{
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--color_DarkGray2);
+}
+
+.current-container > .text{
+    font-size: 20px;
+    font-weight: 500;
+}
