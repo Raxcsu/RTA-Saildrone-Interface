@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RTA Saildrone - UTEC</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+
 </head>
 <body>
 
@@ -83,7 +85,7 @@
                 <table>
                     <tr>
                         <th>Temp</th>
-                        <td>25 °C</td>
+                        <td id="myData"> 25 °C </td>
                     </tr>
                     <tr>
                         <th>Wind Vel</th>
@@ -95,8 +97,9 @@
                     </tr>
                 </table>
             </div>
-
         </div>
+
+        
     </main>
 
     <!--footer>
@@ -110,8 +113,9 @@
     </footer-->
 
     <!-- JavaScript -->
-    <script src="./js/battery-script.js"></script>
+    <!--script src="./js/battery-script.js"></script-->
     <script src="./js/data-script.js"></script>
+    <!--script src="./server/index.js"></script-->
 
 </body>
 </html>

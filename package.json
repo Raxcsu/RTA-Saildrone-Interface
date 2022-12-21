@@ -1,9 +1,29 @@
 {
-    "name": "basic-socket",
-    "version": "0.0.1",
-    "description": "Communication between Arduino and HTML/JavaScript",
-    "dependencies": {
-        "socket.io": "^2.0.4",
-        "serialport": "^9.0.1"
-    }
+  "name": "rta-saildrone-interface",
+  "version": "1.0.0",
+  "description": "Interfaz diseñada para la competencia de Veleros Autónomos organizado por la Marina de Guerra del Perú y la Sociedad Nacional de Industrias.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raxcsu/RTA-Saildrone-Interface.git"
+  },
+  "keywords": [],
+  "author": "Oscar Castro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raxcsu/RTA-Saildrone-Interface/issues"
+  },
+  "homepage": "https://github.com/Raxcsu/RTA-Saildrone-Interface#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "serialport": "^10.5.0",
+    "socket.io": "^4.5.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
 }

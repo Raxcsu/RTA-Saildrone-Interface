@@ -9,7 +9,8 @@ let batteryStartValue = 100,
     currentStartValue2 = 2,
     currentMin = 2,
     currentMax = 12,
-    currentSpeed = 100;
+    currentSpeed = 100,
+    data = 1;
 
 async function get_current() {
 
@@ -52,5 +53,14 @@ async function get_battery(){
     }
 }
 
+const socket = io();
+
+socket.on('counter', function(data){
+    console.log(data);
+    let num = document.getElementById('myData');
+    num.innerHTML = `${data} °C`;
+});
+
 setInterval(get_battery, batterySpeed);    
 setInterval(get_current, currentSpeed);
+
