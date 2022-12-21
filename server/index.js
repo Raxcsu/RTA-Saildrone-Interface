@@ -33,13 +33,23 @@ parser.on('open', function(data){
 });
 
 parser.on('data', function(data){
-    //var enc = new TextDecoder();
-    //var arr = new Uint8Array(data);
-    //ready = enc.decode(arr)
+    var enc = new TextDecoder();
+    var arr = new Uint8Array(data);
+    arduino = enc.decode(arr)
     //console.log(ready);
-    let counter = parseInt(data, 10);
-    console.log(counter);
-    io.emit('counter', data.toString());
+    //let counter = parseInt(data, 10);
+    console.log(arduino);
+    arduino = arduino.toString();
+    let bigdata = arduino.split('|');
+
+    io.emit('arduino', {
+        Lati:bigdata[0],
+        Long:bigdata[1],
+        Bate:bigdata[2],
+        Amp1:bigdata[3],
+        Amp2:bigdata[4],
+        Temp:bigdata[5],
+    });
 });
 
 parser.on('error', (err) => console.log(err));
