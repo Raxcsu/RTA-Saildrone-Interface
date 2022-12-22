@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTA Saildrone - UTEC</title>
+    
     <link rel="stylesheet" href="./css/style.css">
     <script src="/socket.io/socket.io.js" charset="utf-8"></script>
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""
+    ></script>
+
+    <title>RTA Saildrone - UTEC</title>
 </head>
+
 <body>
 
     <header>
@@ -68,15 +83,17 @@
     
         <div class="Middle">
             <h3>RTA Geolocalization</h3>
-            <div class="mapa">
+            <!--div class="mapa">
                 <img 
                     src="./img/map.png"
                     height="720"
                     style="object-fit: contain;"
                 >
-            </div>
+            </div-->
+            <div id="rtaMap"></div>            
         </div>
     
+
         <div class="Rigth">
             <h3>Environmental Data</h3>
 

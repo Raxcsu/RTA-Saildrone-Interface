@@ -14,13 +14,13 @@ void setup() {
 }
 
 void loop() {
-  Lati = random(20, 25);
+  Lati = random(11, 13);
   dLati = random(1, 99)/100.0;
-  Lati = Lati + dLati;
+  Lati = -1*(Lati + dLati);
   
-  Long = random(20, 40);
+  Long = random(76, 78);
   dLong = random(1, 99)/100.0;
-  Long = Long + dLong;
+  Long = -1*(Long + dLong);
   
   Bate = random(45, 50);
 
